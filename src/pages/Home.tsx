@@ -1,3 +1,5 @@
+import { useNavigate } from 'react-router-dom';
+
 // Em react a imagem sempre é importada, ele nao etende o caminho passado como parametro
 import illustration from '../assets/img/illustration.svg';
 import logoImg from '../assets/img/logo.svg';
@@ -11,6 +13,13 @@ import '../styles/auth.scss';
 
 
 export function Home(){
+
+  //Navegar em outra página clicando no link desse componente
+  const navigate = useNavigate();
+  function navigateToNewRoom(){
+    navigate('/rooms/new');
+  };
+
   return(
     <div id='page-auth'>
       <aside>
@@ -21,7 +30,7 @@ export function Home(){
       <main>
         <div className='main-content'>
           <img src={logoImg} alt="Logotipo let me ask"/>
-          <button className='create-room'> 
+          <button onClick={ navigateToNewRoom } className='create-room'> 
             <img src={googleIconImg} alt="Logo do google"/>
             Crie sua sala com o Google 
           </button>
