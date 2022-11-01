@@ -1,4 +1,5 @@
-import firebase from 'firebase/app';
+import firebase from 'firebase/compat/app';
+
 
 //Importando os servicos que eu vou utilizar do firebase
 import { getAuth } from 'firebase/auth';
