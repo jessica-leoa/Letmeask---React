@@ -3,8 +3,9 @@ import { useNavigate } from 'react-router-dom';
 // Firebase
 import firebase from 'firebase/compat/app';
 import 'firebase/compat/auth';
-import { getAuth, signInWithPopup, GoogleAuthProvider } from "firebase/auth";
+import { getAuth, signInWithPopup, GoogleAuthProvider} from "firebase/auth";
 import 'firebase/compat/firestore';
+
 
 // Em react a imagem sempre é importada, ele nao etende o caminho passado como parametro
 import illustration from '../assets/img/illustration.svg';
@@ -48,7 +49,7 @@ export function Home(){
           <button onClick={ handleCreateRoom } className='create-room'> 
             <img src={googleIconImg} alt="Logo do google"/>
             Crie sua sala com o Google 
-          </button>
+          </button>        
           <div className='separator'> Ou entre em uma sala </div>
           <form>
             <input type="text"
